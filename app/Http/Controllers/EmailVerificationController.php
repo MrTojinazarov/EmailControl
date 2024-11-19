@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Email_Vertification;
 use Illuminate\Http\Request;
 
-class EmailVertificationController extends Controller
+class EmailVerificationController extends Controller
 {
     /**
      * Display a listing of the resource.
