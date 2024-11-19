@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Email_Vertification;
+use App\Models\Email_Verification;
 use Illuminate\Http\Request;
 
 class EmailVerificationController extends Controller
@@ -34,7 +34,7 @@ class EmailVerificationController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Email_Vertification $email_Vertification)
+    public function show(Email_Verification $email_Vertification)
     {
         //
     }
@@ -42,7 +42,7 @@ class EmailVerificationController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Email_Vertification $email_Vertification)
+    public function edit(Email_Verification $email_Vertification)
     {
         //
     }
@@ -50,7 +50,7 @@ class EmailVerificationController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Email_Vertification $email_Vertification)
+    public function update(Request $request, Email_Verification $email_Vertification)
     {
         //
     }
@@ -58,7 +58,7 @@ class EmailVerificationController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Email_Vertification $email_Vertification)
+    public function destroy(Email_Verification $email_Vertification)
     {
         //
     }
