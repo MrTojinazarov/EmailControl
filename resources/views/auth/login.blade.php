@@ -19,12 +19,12 @@
                     </div>
                     <div data-mdb-input-init class="form-outline mt-4">
                         <label class="form-label ms-2" for="form2Example1">Email</label>
-                        <input type="email" id="form2Example1" class="form-control" placeholder="Email" />
+                        <input type="email" name="email" id="form2Example1" class="form-control" placeholder="Email" />
                     </div>
 
                     <div data-mdb-input-init class="form-outline mt-4">
                         <label class="form-label ms-2" for="form2Example2">Password</label>
-                        <input type="password" id="form2Example2" class="form-control"  placeholder="Password"/>
+                        <input type="password" name="password" id="form2Example2" class="form-control"  placeholder="Password"/>
                     </div>
 
                     <div class="text-center mt-4">
@@ -33,7 +33,7 @@
                     </div>
 
                     <div class="text-center mt-4">
-                        <p>Not a member? <a href="{{route('register.page')}}">Register</a></p>
+                        <p>Not a member? <a href="{{route('register.page')}}" class="fw-bold text-body">Register</a></p>
                         {{-- <a href="{{route('password.restore')}}">Forgot password?</a> --}}
                     </div>
                 </form>
