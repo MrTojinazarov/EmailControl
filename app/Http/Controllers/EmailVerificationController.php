@@ -2,62 +2,50 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\SendMessage;
 use App\Models\Email_Verification;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 
 class EmailVerificationController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+
     public function index()
     {
         //
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
         //
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
-        //
     }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(Email_Verification $email_Vertification)
+    
+    public function sendcode()
     {
-        //
+        $code = random_int(111111, 999999);
+        $user = Auth::user();
+        Email_Verification::create([
+            'user_id' => $user->id,
+            'email' => $user->email,
+            'code' => $code,
+        ]);
+
+        $data = [
+            'code' => $code,
+            'title' => 'Verify code',
+            'description' => 'Email verify code',
+            'text' => 'Quidagi kodni kiriting!',
+        ];
+    
+        Mail::to($user->email)->send(new SendMessage($data));
+        
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Email_Verification $email_Vertification)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Email_Verification $email_Vertification)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(Email_Verification $email_Vertification)
     {
         //

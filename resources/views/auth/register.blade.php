@@ -21,7 +21,8 @@
                                     <div class="card" style="border-radius: 15px;">
                                         <div class="card-body p-5">
                                             <h2 class="text-uppercase text-center mb-5">Create an account</h2>
-                                            <form>
+                                            <form method="post" action="{{route('register.store')}}">
+                                                @csrf
                                                 <div data-mdb-input-init class="form-outline mb-4">
                                                     <input type="text" name="name" id="form3Example1cg"
                                                         class="form-control form-control-lg" />
@@ -48,7 +49,7 @@
                                                 </div>
     
                                                 <div class="d-flex justify-content-center">
-                                                    <button type="button" data-mdb-button-init data-mdb-ripple-init
+                                                    <button type="submit" data-mdb-button-init data-mdb-ripple-init
                                                         class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Register</button>
                                                 </div>
     
